@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const PORT = 3000;
-const taskRoutes = require("./routes/task.routes");
+const taskRoutes = require("./src/routes/task.routes");
 
 app.use(express.json());
 app.use("/api/tasks", taskRoutes);
