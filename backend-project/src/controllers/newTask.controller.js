@@ -1,21 +1,15 @@
-const model = require("../models/Task")
-
+const model = require("../models/Task");
 
 const newTask = (req, res) => {
+  const { title, description, completed } = req.body;
 
-const{title, description} = req.body
-
-model.create({title,description}, (error, id) => {
-    if(error){
-        return console.error(error)
+  model.create({ title, description, completed:completed? true :false }, (error, id) => {
+    if (error) {
+      return console.error(error);
     }
 
-    res.status(201).json({
-        id,
-        title,
-        description
-    })
-})
-}
+    res.status(201).json({ id, title, description,completed:completed? true :false });
+  });
+};
 
-module.exports = newTask
+module.exports = newTask;

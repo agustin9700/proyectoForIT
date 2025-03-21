@@ -12,8 +12,8 @@ const db = new sqlite.Database(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         title VARCHAR(30) NOT NULL,
         description VARCHAR(100) NOT NULL,
-        completed BOOLEAN DEFAULT 0,
-        cretedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+        completed BOOLEAN  DEFAULT 0,
+        createdAt DATETIME DEFAULT CURRENT_TIMESTAMP
     )` 
         db.run(createdb, (error) => {
             if(error){
