@@ -1,14 +1,11 @@
-
-
+import TaskList from "./components/TaskList";
 
 function App() {
-  
-
   return (
     <>
-     <h1 className="text-5xl bg-red-500">holaaaaa</h1>
+      <TaskList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
