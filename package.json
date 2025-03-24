@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "instalar": "cd frontend-project && npm install && cd ../backend-project && npm install",
     "frontend": "cd frontend-project && npm run dev",
     "backend": "cd backend-project && npm run dev",
     "dev": "concurrently \"npm run frontend\" \"npm run backend\""
